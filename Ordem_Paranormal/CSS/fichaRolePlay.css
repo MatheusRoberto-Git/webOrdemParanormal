@@ -1,0 +1,293 @@
+.containerFicha {
+    max-width: 500px;
+    max-height: 100%;
+    margin: 5px;
+    padding: 0, 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    border: 1.7px solid rgb(145, 0, 0);
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.905);
+}
+
+.tituloResistencias {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+#tituloResParanormal, #tituloResFisica {
+    position: absolute;
+    z-index: 1;
+}
+
+#tituloResParanormal {
+    margin-right: 1rem;
+    z-index: 2;
+}
+
+.btnResistencias {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+.btnResistenciaFisica {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.btnResistenciaParanormal {
+    max-width: 60px;
+    max-height: 50px;
+}
+
+.img-nomes {
+    display: flex;
+    justify-content: space-around;
+}
+
+.avatar {
+    border-radius: 100%;
+    width: 35%;
+    height: 200px;
+    margin-right: 10%;
+}
+
+    .avatar:hover, .btnResistenciaParanormal:hover, .btnResistenciaFisica:hover {
+        transform: scale(1.1);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        cursor: pointer;
+    }
+
+.containerJogador-Personagem {
+    display: flex;
+    flex-direction: column;
+}
+
+.Jogador-Personagem {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nomeJogador-Personagem,
+.quantStatusDefensivos,
+.quantStatusResistenciaFisica,
+.quantStatusResistenciaParanormal {
+    width: 100%;
+    height: 50px;
+    border: 0;
+    border-bottom: rgb(145, 0, 0) solid 2px;
+    outline: 0;
+    background: transparent;
+    font-size: 22px;
+    text-align: center;
+    color: purple;
+    font-family: Lacquer;
+}
+
+.quantStatusDefensivos, .quantStatusResistenciaFisica, .quantStatusResistenciaParanormal {
+    width: 40px;
+    height: 30px;
+    color: white;
+}
+
+    .nomeJogador-Personagem:focus,
+    .quantStatusDefensivos:focus,
+    .quantStatusResistenciaFisica:focus,
+    .quantStatusResistenciaParanormal:focus {
+        animation: border-fade 1s infinite alternate;
+    }
+
+@keyframes border-fade {
+    0% {
+        border-color: red;
+    }
+
+    100% {
+        border-color: purple;
+    }
+}
+
+.orgm-class {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Origem-Classe {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nomeOrigem-Classe {
+    display: flex;
+    max-width: 200px;
+    max-height: 50px;
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 10px;
+    /* background-color: rgba(145, 0, 0, 0.363); */
+    background-color: rgba(0, 0, 0, 0.363);
+    border: 1.5px solid rgba(145, 0, 0, 0.699);
+    font-size: 20px;
+    text-align: center;
+}
+
+.inputSql {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    font-size: 22px;
+    text-align: center;
+    color: purple;
+    z-index: 2;
+}
+
+#containerOrigem-Classe-Origem {
+    margin-right: 25px;
+}
+
+.status, .defensivos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 467px;
+    max-height: 235px;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: 2px solid rgba(145, 0, 0, 0.63);
+}
+
+.status {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.defensivos {
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    padding: 0;
+}
+
+.tituloStatus, .tituloDefensivos {
+    color: rgb(0, 0, 0);
+}
+
+.status-vida,
+.status-sanidade,
+.status-peRodada,
+.status-peTotal,
+.def-defesa,
+.def-reflexo,
+.def-bloqueio {
+    display: flex;
+}
+
+.status-peTotal {
+    padding-bottom: 20px;
+}
+
+.buttonStatusLife, .buttonStatusSanity, .buttonStatusPeRodada, .buttonStatusPeTotal {
+    width: 25px;
+    height: 15px;
+    margin: 3px;
+    margin-right: 5px;
+}
+
+    .buttonStatusLife:hover,
+    .buttonStatusSanity:hover,
+    .buttonStatusPeRodada:hover,
+    .buttonStatusPeTotal:hover {
+        width: 27px;
+        height: 17px;
+        cursor: pointer;
+    }
+
+#heart, #sanity, #peRodada, #peTotal, #defesa, #reflexo, #bloqueio {
+    width: 30px;
+    margin-right: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+#defesa {
+    height: 30px;
+    margin-right: 5px;
+}
+
+#reflexo {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+}
+
+#bloqueio {
+    height: 30px;
+}
+
+#heart.pulsando, #sanity.pulsando, #peRodada.pulsando, #peTotal.pulsando {
+    transform: scale(1.5);
+}
+
+.progressLife, .progressSanity, .progressPeRodada, .progressPeTotal {
+    width: 100%;
+    height: 25px;
+    border-radius: 10px;
+    background-color: rgb(20, 20, 20);
+    border: 2px solid rgba(145, 0, 0, 0.63);
+}
+
+.barLife, .barSanity, .barPeRodada, .barPeTotal {
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out;
+    text-align: center;
+    font-weight: 600;
+}
+
+    .barLife.green, .barSanity.green, .barPeRodada.green, .barPeTotal.green {
+        border-radius: 10px;
+        background-color: #087008;
+    }
+
+    .barLife.yellow, .barSanity.yellow, .barPeRodada.yellow, .barPeTotal.yellow {
+        border-radius: 10px;
+        background-color: #856d0e;
+    }
+
+    .barLife.red, .barSanity.red, .barPeRodada.red, .barPeTotal.red {
+        border-radius: 10px;
+        background-color: #992a0e;
+    }
+
+.cardModal {
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.850);
+    border: 1px solid white;
+}
+
+.organizacaoColuna {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.centralizarTitulos {
+    text-align: center;
+}
+
+.resistenciaParanormal {
+    display: flex;
+    flex-direction: column;
+}
+
+.resistenciaParanormalLinha1, .resistenciaParanormalLinha2, .resistenciaParanormalMedo {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
